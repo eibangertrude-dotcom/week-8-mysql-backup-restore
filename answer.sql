@@ -1,0 +1,53 @@
+
+-- =====================================================
+-- WEEK 8 ASSIGNMENT: MYSQL DATABASE BACKUP AND RESTORE
+-- Student: Tyrone Kasiba
+-- Database: sales
+-- MySQL Version: 8.4.11
+-- =====================================================
+
+
+-- QUESTION 1: CREATING A COMPLETE DATABASE BACKUP
+--
+-- Command to execute in the VS Code PowerShell terminal:
+--
+-- mysqldump -u root -p sales > sales_backup.sql
+--
+-- Explanation:
+-- mysqldump is a MySQL utility used to create database backups.
+-- -u root specifies the MySQL username.
+-- -p prompts the user to enter the MySQL password.
+-- sales specifies the database to back up.
+-- > redirects the backup output into sales_backup.sql.
+--
+-- This command creates a complete logical backup of the
+-- sales database, including its table structures and data.
+--
+-- Regular database backups are important because they help
+-- prevent permanent data loss caused by hardware failures,
+-- accidental deletion, corruption, or other unexpected events.
+-- They also make database recovery easier.
+
+
+-- QUESTION 2: BACKING UP ALL DATABASES
+--
+-- Command to execute in the VS Code PowerShell terminal:
+--
+-- mysqldump -u root -p --all-databases > all_databases_backup.sql
+--
+-- Explanation:
+-- mysqldump is used to export MySQL databases.
+-- -u root specifies the MySQL username.
+-- -p prompts for the database password.
+-- --all-databases instructs MySQL to back up all databases
+-- on the server.
+-- > saves the backup into all_databases_backup.sql.
+--
+-- Backing up all databases before migration is important
+-- because it preserves the databases and their data.
+-- It helps ensure that information can be restored on
+-- another server if migration fails or data is lost.
+--
+-- =====================================================
+-- END OF WEEK 8 ASSIGNMENT
+-- =====================================================
